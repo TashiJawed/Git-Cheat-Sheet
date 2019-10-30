@@ -19,11 +19,11 @@ git log
 ### Reset:
 ```
 git reset (unstage file)
-git reset --hard(remove changes whether staged or not, reverts back changes to prev commit)
+git reset --hard (remove changes whether staged or not, reverts back changes to prev commit)
 ```
 
-## Gitignore
-**Ignores files wirtten in it. but it needs to be added to git also **
+## Gitignore:
+**Ignores files wirtten in it. but it needs to be added to git also**
 
 `.gitignore` 
 
@@ -83,7 +83,7 @@ git remote show origin (shows details of origin)
 ### Pull Remote branch:
 `git pull <repo name> <branch name>`
 
-###Publish a local repo to Github:
+### Publish a local repo to Github:
 ```
 1. Create a repo on github
 2. git remote add <repo name for e.g origin> https://github....(connects local repo to github)
@@ -106,39 +106,47 @@ remote: git push -d <repo name> <branch name>
 git branch -dr <repo name>/<branch name> (remove local + link to remote branch)
 ```
 
-Log:
+##Log:
+```
 git log (shows log for current branch)
 git log <repo name>/master (shows log from remote branch)
+```
 
-Undoing Local Changes(Not commited):
-perticular file
-git checkout HEAD <file/to/restore)
+### Undoing Local Changes(Not commited):
+Perticular file
+`git checkout HEAD <file/to/restore)`
 All files
-git reset --hard HEAD
+`git reset --hard HEAD`
 
-Undoing Commited Changes:
-git revert <commit-hash> (does not actually delete any commit, instead revert changes into a new commit)
-	OR
+### Undoing Commited Changes:
+
+`git revert <commit-hash> (does not actually delete any commit, instead revert changes into a new commit)`
+	**OR**
+```
 git reset --hard <commitHash> (roll back to <commitHash> and discards history)
 git reset --keep <commitHash> (roll back but keeps history of commit from which rolling back)
+```
 
-Force Push:
+### Force Push:
 When local commits is behind remote commits after rolling back then git push won't work
 beacuse of the diffrence in commits so:
-git push -f <repo name> <branch name>
 
-Fast-Forward Commit:
-simple commit. When only one branch is ahead of another branch so merging is simple.
+`git push -f <repo name> <branch name>`
 
-Merge Commit:
+### Fast-Forward Commit:
+Simple commit. When only one branch is ahead of another branch so merging is simple.
+
+### Merge Commit:
 When 2 branches have different commits than how to merge them?
 Merge creates an additional commit to bring both branches to same point
 
-Rebase:
+### Rebase:
 Opposite of merge
 When you want to make commits look like a timeline
-git rebase <branch name>
-For E.g:
+`git rebase <branch name>`
+
+**For E.g:**
+
 Branch A has commits
 Branch B has some other commits
 Rebase wil:
