@@ -56,8 +56,10 @@ git stash list (show list of stashes)
 ```
 
 **Apply**
+```
 git stash pop (apply latest stash and remove it from clipboard)
 git stash apply stashname (apply specific stash and will remain saved in clipboard)
+```
 
 ### Clone:
 `git clone <URL>`
@@ -106,22 +108,26 @@ remote: git push -d <repo name> <branch name>
 git branch -dr <repo name>/<branch name> (remove local + link to remote branch)
 ```
 
-##Log:
+### Log:
 ```
 git log (shows log for current branch)
 git log <repo name>/master (shows log from remote branch)
 ```
 
-### Undoing Local Changes(Not commited):
-Perticular file
-`git checkout HEAD <file/to/restore)`
-All files
-`git reset --hard HEAD`
+### Undoing Local Changes (Not commited):
+
+**Perticular file**
+```git checkout HEAD <file/to/restore)```
+
+**All files**
+```git reset --hard HEAD```
 
 ### Undoing Commited Changes:
 
 `git revert <commit-hash> (does not actually delete any commit, instead revert changes into a new commit)`
-	**OR**
+
+**OR**
+
 ```
 git reset --hard <commitHash> (roll back to <commitHash> and discards history)
 git reset --keep <commitHash> (roll back but keeps history of commit from which rolling back)
@@ -143,6 +149,7 @@ Merge creates an additional commit to bring both branches to same point
 ### Rebase:
 Opposite of merge
 When you want to make commits look like a timeline
+
 `git rebase <branch name>`
 
 **For E.g:**
