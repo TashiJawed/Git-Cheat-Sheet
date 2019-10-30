@@ -5,13 +5,15 @@
 `git init`
 
 ### Status:
+```
 git status
 git log
+```
 
 ### Staging Area:
 `git add . `
 
-###Commit:
+### Commit:
 `git commit -m 'sdf' `
 
 ### Reset:
@@ -20,7 +22,10 @@ git reset (unstage file)
 git reset --hard(remove changes whether staged or not, reverts back changes to prev commit)
 ```
 
-.gitignore (ignores files wirtten in it. but it needs to be added to git also)
+## Gitignore
+**Ignores files wirtten in it. but it needs to be added to git also **
+
+`.gitignore` 
 
 ## Chapter 3: Branches
 
@@ -54,42 +59,52 @@ git stash list (show list of stashes)
 git stash pop (apply latest stash and remove it from clipboard)
 git stash apply stashname (apply specific stash and will remain saved in clipboard)
 
-Clone:
-git clone <URL>
+### Clone:
+`git clone <URL>`
 
-make change
-Add file by git add .
-commit file
+**Make change**
+1. Add file by `git add .`
+2. Commit file
 
-Push
+### Push:
+```
 git push (push changes to remote repository)
 
 git fetch (fetch changes from remote repo but dont apply it)
 git merge (merge changes that was fetch)
+```
 
-Pull:
+### Pull:
+```
 git pull (fetch and merge)
 git remote -v (shows remote URLs)
 git remote show origin (shows details of origin)
-Pull Remote branch:
-git pull <repo name> <branch name>
+```
+### Pull Remote branch:
+`git pull <repo name> <branch name>`
 
-Publish a local repo to Github:
-1. create a repo on github
+###Publish a local repo to Github:
+```
+1. Create a repo on github
 2. git remote add <repo name for e.g origin> https://github....(connects local repo to github)
 3. git push -u <repo name> master (-u for first time only)
 		Next time
 3. git push <repo name> master
+```
 
-Publish local branch to remote repo:
+### Publish local branch to remote repo:
+```
 git branch work
 git checkout work
 git push -u <repo name> work
+```
 
-Delete a branch:
+### Delete a branch:
+```
 Local : git branch -d <branch name>
 remote: git push -d <repo name> <branch name>
 git branch -dr <repo name>/<branch name> (remove local + link to remote branch)
+```
 
 Log:
 git log (shows log for current branch)
